@@ -32,7 +32,7 @@ const api = {
     return cachedFetch(url, res => res.json());
   },
   staticContent(name) {
-    return cachedFetch(`${STATIC_URL}/${name}`, res => res.text());
+    return cachedFetch(`${STATIC_URL}${name}`, res => res.text());
   }
 };
 
