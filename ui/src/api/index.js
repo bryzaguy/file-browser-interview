@@ -3,18 +3,9 @@ const cache = {};
 const SEARCH_URL = process.env.REACT_APP_SEARCH_URL;
 const STATIC_URL = process.env.REACT_APP_STATIC_URL;
 
-function sleep(result, ms) {
-  // add ms millisecond timeout before promise resolution
-  return new Promise(resolve => setTimeout(() => resolve(result), ms));
-}
-
 function cachedFetch(url, thenCb) {
   const onFailure = (e) => { cache[url] = null; throw e };
-
-  cache[url] = cache[url] || fetch(url)
-    .then(res => thenCb(res), onFailure)
-    .then(res => sleep(res, 2000));
-
+  cache[url] = cache[url] || fetch(url).then(res => thenCb(res), onFailure);
   return cache[url];
 }
 

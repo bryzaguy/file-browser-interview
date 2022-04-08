@@ -6,6 +6,10 @@ const morgan = require('morgan');
 const path = require('path');
 const util = require('util');
 
+const key = fs.readFileSync('./cert/key.pem');
+const cert = fs.readFileSync('./cert/cert.pem');
+const https = require('https');
+
 const PORT = 8081;
 
 const readDirAsync = util.promisify(fs.readdir);
@@ -33,6 +37,7 @@ async function getAllFilenamesAsync() {
 
 async function main() {
   const app = express();
+  const server = https.createServer({ key, cert }, app);
   const logger = morgan('dev');
   const files = await getAllFilenamesAsync();
   files.sort();
@@ -61,8 +66,12 @@ async function main() {
     res.sendFile(path.join(__dirname, '/index.html'));
   });
 
-  console.log('Server started on port', PORT);
-  app.listen(PORT);
+  console.log(`Server (http${process.env.SECURE ? 's' : ''}) started on port`, PORT);
+  if (process.env.SECURE) {
+    server.listen(PORT);
+  } else {
+    app.listen(PORT);
+  }
 }
 
 main();
