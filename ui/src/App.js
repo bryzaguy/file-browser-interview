@@ -9,13 +9,14 @@ export default function App({ api }) {
   const [items, setItems] = React.useState([]);
   const [errorMessage, setErrorMessage] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
+  const [count, setCount] = React.useState(null);
 
   // Calls the api initially and when prefix changes.
   React.useEffect(() => {
     setItems([]);
     setErrorMessage('');
     setLoading(true);
-    api({ prefix, randomDelay: true }).then(
+    api({ prefix, count, randomDelay: true }).then(
       result => {
         setItems(result);
         setLoading(false);
@@ -27,7 +28,7 @@ export default function App({ api }) {
         }
       }
     );
-  }, [prefix, api]);
+  }, [prefix, api, count]);
 
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const mdTheme = createTheme({
@@ -57,6 +58,8 @@ export default function App({ api }) {
             onFilter={e => setPrefix(e.target.value)}
             errorMessage={errorMessage}
             loading={loading}
+            count={count}
+            onCountChange={setCount}
           />
         </Box>
       </Box>

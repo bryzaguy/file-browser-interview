@@ -30,7 +30,6 @@ Object {
                   >
                     <th
                       class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1ygcj2i-MuiTableCell-root"
-                      colspan="2"
                       scope="col"
                     >
                       <div
@@ -70,6 +69,48 @@ Object {
                         </div>
                       </div>
                     </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1ygcj2i-MuiTableCell-root"
+                      scope="col"
+                      width="200"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                      >
+                        <label
+                          class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-1pysi21-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="false"
+                          for=":r0:"
+                          id=":r0:-label"
+                        >
+                          # of results
+                        </label>
+                        <div
+                          class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+                        >
+                          <input
+                            aria-invalid="false"
+                            class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
+                            id=":r0:"
+                            placeholder="10"
+                            type="number"
+                            value=" "
+                          />
+                          <fieldset
+                            aria-hidden="true"
+                            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                          >
+                            <legend
+                              class="css-1ftyaf0"
+                            >
+                              <span>
+                                # of results
+                              </span>
+                            </legend>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </th>
                   </tr>
                 </thead>
                 <tbody
@@ -79,210 +120,260 @@ Object {
                     class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                   >
                     <td
-                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                      colspan="3"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="InsertDriveFileOutlinedIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
+                      <div
+                        class="MuiBox-root css-1nylpq2"
                       >
-                        <path
-                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                        />
-                      </svg>
-                        
-                      .yarn-integrity
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                          data-testid="InsertDriveFileOutlinedIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                          />
+                        </svg>
+                          
+                        .yarn-integrity
+                      </div>
                     </td>
                   </tr>
                   <tr
                     class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                   >
                     <td
-                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                      colspan="3"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="InsertDriveFileOutlinedIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
+                      <div
+                        class="MuiBox-root css-1nylpq2"
                       >
-                        <path
-                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                        />
-                      </svg>
-                        
-                      accepts/HISTORY.md
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                          data-testid="InsertDriveFileOutlinedIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                          />
+                        </svg>
+                          
+                        accepts/HISTORY.md
+                      </div>
                     </td>
                   </tr>
                   <tr
                     class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                   >
                     <td
-                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                      colspan="3"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="InsertDriveFileOutlinedIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
+                      <div
+                        class="MuiBox-root css-1nylpq2"
                       >
-                        <path
-                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                        />
-                      </svg>
-                        
-                      accepts/LICENSE
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                          data-testid="InsertDriveFileOutlinedIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                          />
+                        </svg>
+                          
+                        accepts/LICENSE
+                      </div>
                     </td>
                   </tr>
                   <tr
                     class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                   >
                     <td
-                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                      colspan="3"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="InsertDriveFileOutlinedIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
+                      <div
+                        class="MuiBox-root css-1nylpq2"
                       >
-                        <path
-                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                        />
-                      </svg>
-                        
-                      accepts/README.md
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                          data-testid="InsertDriveFileOutlinedIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                          />
+                        </svg>
+                          
+                        accepts/README.md
+                      </div>
                     </td>
                   </tr>
                   <tr
                     class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                   >
                     <td
-                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                      colspan="3"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="InsertDriveFileOutlinedIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
+                      <div
+                        class="MuiBox-root css-1nylpq2"
                       >
-                        <path
-                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                        />
-                      </svg>
-                        
-                      accepts/index.js
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                          data-testid="InsertDriveFileOutlinedIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                          />
+                        </svg>
+                          
+                        accepts/index.js
+                      </div>
                     </td>
                   </tr>
                   <tr
                     class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                   >
                     <td
-                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                      colspan="3"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="InsertDriveFileOutlinedIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
+                      <div
+                        class="MuiBox-root css-1nylpq2"
                       >
-                        <path
-                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                        />
-                      </svg>
-                        
-                      accepts/package.json
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                          data-testid="InsertDriveFileOutlinedIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                          />
+                        </svg>
+                          
+                        accepts/package.json
+                      </div>
                     </td>
                   </tr>
                   <tr
                     class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                   >
                     <td
-                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                      colspan="3"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="InsertDriveFileOutlinedIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
+                      <div
+                        class="MuiBox-root css-1nylpq2"
                       >
-                        <path
-                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                        />
-                      </svg>
-                        
-                      array-flatten/LICENSE
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                          data-testid="InsertDriveFileOutlinedIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                          />
+                        </svg>
+                          
+                        array-flatten/LICENSE
+                      </div>
                     </td>
                   </tr>
                   <tr
                     class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                   >
                     <td
-                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                      colspan="3"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="InsertDriveFileOutlinedIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
+                      <div
+                        class="MuiBox-root css-1nylpq2"
                       >
-                        <path
-                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                        />
-                      </svg>
-                        
-                      array-flatten/README.md
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                          data-testid="InsertDriveFileOutlinedIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                          />
+                        </svg>
+                          
+                        array-flatten/README.md
+                      </div>
                     </td>
                   </tr>
                   <tr
                     class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                   >
                     <td
-                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                      colspan="3"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="InsertDriveFileOutlinedIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
+                      <div
+                        class="MuiBox-root css-1nylpq2"
                       >
-                        <path
-                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                        />
-                      </svg>
-                        
-                      array-flatten/array-flatten.js
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                          data-testid="InsertDriveFileOutlinedIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                          />
+                        </svg>
+                          
+                        array-flatten/array-flatten.js
+                      </div>
                     </td>
                   </tr>
                   <tr
                     class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                   >
                     <td
-                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                      colspan="3"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="InsertDriveFileOutlinedIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
+                      <div
+                        class="MuiBox-root css-1nylpq2"
                       >
-                        <path
-                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                        />
-                      </svg>
-                        
-                      array-flatten/package.json
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                          data-testid="InsertDriveFileOutlinedIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                          />
+                        </svg>
+                          
+                        array-flatten/package.json
+                      </div>
                     </td>
                   </tr>
                 </tbody>
@@ -319,7 +410,6 @@ Object {
                 >
                   <th
                     class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1ygcj2i-MuiTableCell-root"
-                    colspan="2"
                     scope="col"
                   >
                     <div
@@ -359,6 +449,48 @@ Object {
                       </div>
                     </div>
                   </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1ygcj2i-MuiTableCell-root"
+                    scope="col"
+                    width="200"
+                  >
+                    <div
+                      class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                    >
+                      <label
+                        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-1pysi21-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="false"
+                        for=":r0:"
+                        id=":r0:-label"
+                      >
+                        # of results
+                      </label>
+                      <div
+                        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
+                          id=":r0:"
+                          placeholder="10"
+                          type="number"
+                          value=" "
+                        />
+                        <fieldset
+                          aria-hidden="true"
+                          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="css-1ftyaf0"
+                          >
+                            <span>
+                              # of results
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </th>
                 </tr>
               </thead>
               <tbody
@@ -368,210 +500,260 @@ Object {
                   class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                 >
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                    colspan="3"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InsertDriveFileOutlinedIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiBox-root css-1nylpq2"
                     >
-                      <path
-                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                      />
-                    </svg>
-                      
-                    .yarn-integrity
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="InsertDriveFileOutlinedIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                        />
+                      </svg>
+                        
+                      .yarn-integrity
+                    </div>
                   </td>
                 </tr>
                 <tr
                   class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                 >
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                    colspan="3"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InsertDriveFileOutlinedIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiBox-root css-1nylpq2"
                     >
-                      <path
-                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                      />
-                    </svg>
-                      
-                    accepts/HISTORY.md
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="InsertDriveFileOutlinedIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                        />
+                      </svg>
+                        
+                      accepts/HISTORY.md
+                    </div>
                   </td>
                 </tr>
                 <tr
                   class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                 >
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                    colspan="3"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InsertDriveFileOutlinedIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiBox-root css-1nylpq2"
                     >
-                      <path
-                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                      />
-                    </svg>
-                      
-                    accepts/LICENSE
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="InsertDriveFileOutlinedIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                        />
+                      </svg>
+                        
+                      accepts/LICENSE
+                    </div>
                   </td>
                 </tr>
                 <tr
                   class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                 >
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                    colspan="3"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InsertDriveFileOutlinedIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiBox-root css-1nylpq2"
                     >
-                      <path
-                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                      />
-                    </svg>
-                      
-                    accepts/README.md
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="InsertDriveFileOutlinedIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                        />
+                      </svg>
+                        
+                      accepts/README.md
+                    </div>
                   </td>
                 </tr>
                 <tr
                   class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                 >
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                    colspan="3"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InsertDriveFileOutlinedIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiBox-root css-1nylpq2"
                     >
-                      <path
-                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                      />
-                    </svg>
-                      
-                    accepts/index.js
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="InsertDriveFileOutlinedIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                        />
+                      </svg>
+                        
+                      accepts/index.js
+                    </div>
                   </td>
                 </tr>
                 <tr
                   class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                 >
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                    colspan="3"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InsertDriveFileOutlinedIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiBox-root css-1nylpq2"
                     >
-                      <path
-                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                      />
-                    </svg>
-                      
-                    accepts/package.json
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="InsertDriveFileOutlinedIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                        />
+                      </svg>
+                        
+                      accepts/package.json
+                    </div>
                   </td>
                 </tr>
                 <tr
                   class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                 >
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                    colspan="3"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InsertDriveFileOutlinedIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiBox-root css-1nylpq2"
                     >
-                      <path
-                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                      />
-                    </svg>
-                      
-                    array-flatten/LICENSE
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="InsertDriveFileOutlinedIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                        />
+                      </svg>
+                        
+                      array-flatten/LICENSE
+                    </div>
                   </td>
                 </tr>
                 <tr
                   class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                 >
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                    colspan="3"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InsertDriveFileOutlinedIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiBox-root css-1nylpq2"
                     >
-                      <path
-                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                      />
-                    </svg>
-                      
-                    array-flatten/README.md
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="InsertDriveFileOutlinedIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                        />
+                      </svg>
+                        
+                      array-flatten/README.md
+                    </div>
                   </td>
                 </tr>
                 <tr
                   class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                 >
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                    colspan="3"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InsertDriveFileOutlinedIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiBox-root css-1nylpq2"
                     >
-                      <path
-                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                      />
-                    </svg>
-                      
-                    array-flatten/array-flatten.js
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="InsertDriveFileOutlinedIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                        />
+                      </svg>
+                        
+                      array-flatten/array-flatten.js
+                    </div>
                   </td>
                 </tr>
                 <tr
                   class="MuiTableRow-root css-1oqrj23-MuiTableRow-root"
                 >
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-kw1evd-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                    colspan="3"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InsertDriveFileOutlinedIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiBox-root css-1nylpq2"
                     >
-                      <path
-                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                      />
-                    </svg>
-                      
-                    array-flatten/package.json
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="InsertDriveFileOutlinedIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+                        />
+                      </svg>
+                        
+                      array-flatten/package.json
+                    </div>
                   </td>
                 </tr>
               </tbody>
