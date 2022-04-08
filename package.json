@@ -4,12 +4,19 @@
   "description": "Server for the File Browser interview problem",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "concurrently --kill-others \"npm run api\" \"npm run ui\"",
+    "api": "node ./index.js",
+    "slow": "concurrently --kill-others \"npm run slow-api\" \"npm run ui\"",
+    "slow-api": "SLOW=1 node ./index.js",
+    "ui": "cd ui; npm i && npm start",
+    "https": "SECURE=1 node ./index.js",
+    "slow-https": "SLOW=1 SECURE=1 node ./index.js"
   },
   "author": "Raven Jiang",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "concurrently": "^7.1.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "morgan": "^1.9.1"
