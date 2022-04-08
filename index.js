@@ -47,9 +47,13 @@ async function main() {
   app.use(cors());
   app.use(logger);
 
+  if (process.env.SLOW) {
+    app.use(function (req, res, next) { setTimeout(next, Math.random() * 3000) });
+  }
+
   app.use('/static', express.static('node_modules'));
 
-  app.get('/search', async function(req, res) {
+  app.get('/search', async function (req, res) {
     const randomDelay = !!JSON.parse(req.query.randomDelay || 'false');
     const prefix = req.query.prefix || '';
     const count = parseInt(req.query.count, 10) || 10;
@@ -62,7 +66,7 @@ async function main() {
     res.send({ results: results.slice(0, count) });
   });
 
-  app.use('/', function(req, res) {
+  app.use('/', function (req, res) {
     res.sendFile(path.join(__dirname, '/index.html'));
   });
 
