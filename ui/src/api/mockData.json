@@ -1,0 +1,14 @@
+{
+  "results": [
+    ".yarn-integrity",
+    "accepts/HISTORY.md",
+    "accepts/LICENSE",
+    "accepts/README.md",
+    "accepts/index.js",
+    "accepts/package.json",
+    "array-flatten/LICENSE",
+    "array-flatten/README.md",
+    "array-flatten/array-flatten.js",
+    "array-flatten/package.json"
+  ]
+}
