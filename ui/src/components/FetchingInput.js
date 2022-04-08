@@ -3,7 +3,7 @@ import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 import { CircularProgress, Input, InputAdornment, Tooltip } from '@mui/material';
 import PropTypes from 'prop-types';
 
-export default function FetchingInput({ onChange, errorMessage, loading }) {
+export default function FetchingInput({ onChange, onKeyDown, errorMessage, loading }) {
   return (
     <Input
       fullWidth
@@ -22,12 +22,14 @@ export default function FetchingInput({ onChange, errorMessage, loading }) {
         </InputAdornment>
       }
       onChange={onChange}
+      onKeyDown={onKeyDown}
     />
   )
 }
 
 FetchingInput.propTypes = {
   onChange: PropTypes.func.isRequired,
+  onKeyDown: PropTypes.func,
   errorMessage: PropTypes.string,
   loading: PropTypes.bool
 };

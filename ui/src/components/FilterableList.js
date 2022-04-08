@@ -8,6 +8,27 @@ import ResultCount from './ResultCount';
 export default function FilterableList({ onFilter, errorMessage, items, loading, count, onCountChange }) {
   const removeLastBorder = { '&:last-child td': { border: 0 } };
   const alignContent = { display: 'flex', alignItems: 'flex-end' };
+  const [selected, setSelected] = React.useState(null);
+
+  const onNavigationKeyPress = e => {
+    const index = items.indexOf(selected);
+    switch (e.key) {
+      case 'ArrowDown': {
+        e.preventDefault();
+        // If past the end, wrap to beginning of list.
+        setSelected(items[(index + 1) % items.length]);
+        break;
+      }
+      case 'ArrowUp': {
+        e.preventDefault();
+        // Wrap to end of list from the beginning.
+        setSelected(items[index <= 0 ? items.length - 1 : index - 1]);
+        break;
+      }
+      default:
+        break;
+    }
+  }
 
   return (
     <Paper elevation={3}>
@@ -19,6 +40,7 @@ export default function FilterableList({ onFilter, errorMessage, items, loading,
                 <FetchingInput
                   errorMessage={errorMessage}
                   onChange={onFilter}
+                  onKeyDown={onNavigationKeyPress}
                   loading={loading}
                 />
               </TableCell>
@@ -33,7 +55,7 @@ export default function FilterableList({ onFilter, errorMessage, items, loading,
           <TableBody>
             {items.map(name => {
               return (
-                <TableRow key={name} sx={removeLastBorder}>
+                <TableRow key={name} sx={removeLastBorder} selected={selected === name} >
                   <TableCell colSpan={3}>
                     <Box sx={alignContent}>
                       <InsertDriveFileOutlinedIcon />&nbsp; {name}
