@@ -1,35 +1,12 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import FilterableList from './components/FilterableList';
-import { Box, useMediaQuery } from '@mui/material';
+import { useMediaQuery } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import FileExplorer from './components/FileExplorer';
+import Background from './components/Background';
+import Container from './components/Container';
 
 export default function App({ api }) {
-  const [prefix, setPrefix] = React.useState(null);
-  const [items, setItems] = React.useState([]);
-  const [errorMessage, setErrorMessage] = React.useState(null);
-  const [loading, setLoading] = React.useState(false);
-  const [count, setCount] = React.useState(null);
-
-  // Calls the api initially and when prefix changes.
-  React.useEffect(() => {
-    setItems([]);
-    setErrorMessage('');
-    setLoading(true);
-    api({ prefix, count, randomDelay: true }).then(
-      result => {
-        setItems(result);
-        setLoading(false);
-      },
-      error => {
-        if (error.name !== 'AbortError') {
-          setErrorMessage("Problem loading data.");
-          setLoading(false);
-        }
-      }
-    );
-  }, [prefix, api, count]);
-
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const mdTheme = createTheme({
     palette: {
@@ -39,35 +16,16 @@ export default function App({ api }) {
 
   return (
     <ThemeProvider theme={mdTheme}>
-      <Box
-        width='100%'
-        minHeight='100vh'
-        sx={{
-          backgroundColor: (theme) =>
-            theme.palette.mode === 'light'
-              ? theme.palette.grey[100]
-              : theme.palette.grey[900]
-        }}>
-        <Box maxWidth={800} p='1rem'
-          sx={{ 'margin': 'auto' }}
-          noValidate
-          autoComplete="off"
-        >
-          <FilterableList
-            items={items}
-            onFilter={e => setPrefix(e.target.value)}
-            errorMessage={errorMessage}
-            loading={loading}
-            count={count}
-            onCountChange={setCount}
-          />
-        </Box>
-      </Box>
+      <Background>
+        <Container>
+          <FileExplorer api={api} />
+        </Container>
+      </Background>
     </ThemeProvider>
   );
 }
 
 App.propTypes = {
-  api: PropTypes.func.isRequired
+  api: PropTypes.object.isRequired
 }
 
