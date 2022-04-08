@@ -4,7 +4,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper
 import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
 import FetchingInput from './FetchingInput';
 
-export default function FilterableList({ onFilter, errorMessage, items }) {
+export default function FilterableList({ onFilter, errorMessage, items, loading }) {
   const removeLastBorder = { '&:last-child td': { border: 0 } };
   const alignContent = { display: 'flex', alignItems: 'flex-end' };
 
@@ -15,7 +15,11 @@ export default function FilterableList({ onFilter, errorMessage, items }) {
           <TableHead>
             <TableRow>
               <TableCell colSpan={2}>
-                <FetchingInput errorMessage={errorMessage} onChange={onFilter} />
+                <FetchingInput
+                  errorMessage={errorMessage}
+                  onChange={onFilter}
+                  loading={loading}
+                />
               </TableCell>
             </TableRow>
           </TableHead>
@@ -44,5 +48,6 @@ export default function FilterableList({ onFilter, errorMessage, items }) {
 FilterableList.propTypes = {
   onFilter: PropTypes.func.isRequired,
   errorMessage: PropTypes.string,
-  items: PropTypes.arrayOf(PropTypes.string)
+  items: PropTypes.arrayOf(PropTypes.string),
+  loading: PropTypes.bool
 };

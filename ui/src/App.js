@@ -8,14 +8,24 @@ export default function App({ api }) {
   const [prefix, setPrefix] = React.useState(null);
   const [items, setItems] = React.useState([]);
   const [errorMessage, setErrorMessage] = React.useState(null);
+  const [loading, setLoading] = React.useState(false);
 
   // Calls the api initially and when prefix changes.
   React.useEffect(() => {
     setItems([]);
     setErrorMessage('');
-    api({ prefix }).then(
-      result => { setItems(result) },
-      () => setErrorMessage("Problem loading data.")
+    setLoading(true);
+    api({ prefix, randomDelay: true }).then(
+      result => {
+        setItems(result);
+        setLoading(false);
+      },
+      error => {
+        if (error.name !== 'AbortError') {
+          setErrorMessage("Problem loading data.");
+          setLoading(false);
+        }
+      }
     );
   }, [prefix, api]);
 
@@ -46,6 +56,7 @@ export default function App({ api }) {
             items={items}
             onFilter={e => setPrefix(e.target.value)}
             errorMessage={errorMessage}
+            loading={loading}
           />
         </Box>
       </Box>

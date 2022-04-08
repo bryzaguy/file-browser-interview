@@ -1,9 +1,9 @@
 import ErrorIcon from '@mui/icons-material/Error';
 import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
-import { Input, InputAdornment, Tooltip } from '@mui/material';
+import { CircularProgress, Input, InputAdornment, Tooltip } from '@mui/material';
 import PropTypes from 'prop-types';
 
-export default function FetchingInput({ onChange, errorMessage }) {
+export default function FetchingInput({ onChange, errorMessage, loading }) {
   return (
     <Input
       fullWidth
@@ -16,7 +16,9 @@ export default function FetchingInput({ onChange, errorMessage }) {
       }
       endAdornment={
         <InputAdornment position="end">
-          {errorMessage && <Tooltip title={errorMessage}><ErrorIcon color='error' /></Tooltip>}
+          {loading ? <CircularProgress size='1rem' /> : (
+            errorMessage && <Tooltip title={errorMessage}><ErrorIcon color='error' /></Tooltip>
+          )}
         </InputAdornment>
       }
       onChange={onChange}
@@ -26,5 +28,6 @@ export default function FetchingInput({ onChange, errorMessage }) {
 
 FetchingInput.propTypes = {
   onChange: PropTypes.func.isRequired,
-  errorMessage: PropTypes.string
+  errorMessage: PropTypes.string,
+  loading: PropTypes.bool
 };

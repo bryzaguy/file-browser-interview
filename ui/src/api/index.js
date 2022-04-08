@@ -1,4 +1,6 @@
 const cache = {};
+var controller = new AbortController();
+var currentUrl = null
 
 export default function api(args = {}) {
   // Filter args with no value.
@@ -10,13 +12,18 @@ export default function api(args = {}) {
   }, {});
 
   const url = 'http://localhost:8081/search?' + new URLSearchParams(params);
-  const clearFailedPromise = () => { cache[url] = null };
-
-  if (!cache[url]) {
-    cache[url] = fetch(url)
-      .then(res => res.json(), clearFailedPromise)
-      .then(res => res.results);
+  const clearFailedPromise = (e) => { cache[url] = null; throw e };
+  if (currentUrl !== url) {
+    controller.abort();
   }
+
+  currentUrl = url;
+  controller = new AbortController();
+  const { signal } = controller;
+
+  cache[url] = cache[url] || fetch(url, { signal })
+    .then(res => res.json(), clearFailedPromise)
+    .then(res => res.results);
 
   return cache[url];
 }
