@@ -10,7 +10,11 @@
     "slow-api": "SLOW=1 node ./index.js",
     "ui": "cd ui; npm i && npm start",
     "https": "SECURE=1 node ./index.js",
-    "slow-https": "SLOW=1 SECURE=1 node ./index.js"
+    "slow-https": "SLOW=1 SECURE=1 node ./index.js",
+    "build": "cd ui; npm run build && rm -rf ../demo && cp -r build ../demo",
+    "commit": "git add demo; git commit -m 'update demo'; git push",
+    "gh-pages": "git checkout gh-pages && git merge master && git push && git checkout master",
+    "deploy": "npm run build && npm run commit && npm run gh-pages"
   },
   "author": "Raven Jiang",
   "license": "ISC",
