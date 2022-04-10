@@ -1,8 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Table, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-import FetchingInput from './FetchingInput';
-import FilterableListBody from './FilterableListBody';
+import FetchableInput from './FetchableInput';
+import FetchableListBody from './FetchableListBody';
 import ResultCount from './ResultCount';
 
 export default function FilterableList(props) {
@@ -31,7 +31,7 @@ export default function FilterableList(props) {
           <TableHead>
             <TableRow>
               <TableCell>
-                <FetchingInput
+                <FetchableInput
                   errorMessage={errorMessage}
                   value={prefix}
                   onChange={onFilter}
@@ -47,7 +47,7 @@ export default function FilterableList(props) {
               </TableCell>
             </TableRow>
           </TableHead>
-          <FilterableListBody items={items} selected={selected} />
+          <FetchableListBody items={items} selected={selected} />
         </Table>
       </TableContainer>
     </Paper>

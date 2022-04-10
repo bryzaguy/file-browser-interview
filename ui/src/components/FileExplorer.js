@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import FilterableList from './FilterableList';
+import FetchableList from './FetchableList';
 import FileViewer from './FileViewer';
 
 export default function FileExplorer({ api }) {
@@ -26,7 +26,7 @@ export default function FileExplorer({ api }) {
         loading={staticContent.loading}
       />
     ) : (
-      <FilterableList
+      <FetchableList
         items={search.data}
         onFilter={e => setPrefix(e.target.value)}
         prefix={prefix}
