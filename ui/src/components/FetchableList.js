@@ -1,12 +1,11 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Table, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-import FetchableInput from './FetchableInput';
 import FetchableListBody from './FetchableListBody';
 import ResultCount from './ResultCount';
 
 export default function FilterableList(props) {
-  const { prefix, selected, onSelect, onFilter, onSubmit, errorMessage, items, loading, count, onCountChange } = props;
+  const { renderInput, selected, onSelect, onSubmit, items, count, onCountChange } = props;
 
   const onNavigationKeyPress = event => {
     const index = items.indexOf(selected);
@@ -31,13 +30,7 @@ export default function FilterableList(props) {
           <TableHead>
             <TableRow>
               <TableCell>
-                <FetchableInput
-                  errorMessage={errorMessage}
-                  value={prefix}
-                  onChange={onFilter}
-                  onKeyDown={onNavigationKeyPress}
-                  loading={loading}
-                />
+                {renderInput({ onKeyDown: onNavigationKeyPress })}
               </TableCell>
               <TableCell width={200}>
                 <ResultCount
@@ -55,14 +48,11 @@ export default function FilterableList(props) {
 }
 
 FilterableList.propTypes = {
-  prefix: PropTypes.string,
+  renderInput: PropTypes.func,
   selected: PropTypes.string,
   onSelect: PropTypes.func,
-  onFilter: PropTypes.func.isRequired,
   onSubmit: PropTypes.func,
-  errorMessage: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.string),
-  loading: PropTypes.bool,
   count: PropTypes.number,
   onCountChange: PropTypes.func.isRequired
 };

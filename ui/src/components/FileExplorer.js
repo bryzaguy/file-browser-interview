@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import FetchableList from './FetchableList';
+import FetchableInput from './FetchableInput';
 import FileViewer from './FileViewer';
 
 export default function FileExplorer({ api }) {
@@ -28,16 +29,21 @@ export default function FileExplorer({ api }) {
     ) : (
       <FetchableList
         items={search.data}
-        onFilter={e => setPrefix(e.target.value)}
-        prefix={prefix}
+        renderInput={(props) => (
+          <FetchableInput
+            {...props}
+            errorMessage={search.error}
+            loading={search.loading}
+            value={prefix}
+            onChange={e => setPrefix(e.target.value)}
+          />
+        )}
         selected={selected}
         onSelect={setSelected}
         onSubmit={() => {
           setViewFile(true);
           staticContent.get(selected);
         }}
-        errorMessage={search.error}
-        loading={search.loading}
         count={count}
         onCountChange={setCount}
       />
