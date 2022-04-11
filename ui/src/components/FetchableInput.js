@@ -4,24 +4,30 @@ import { CircularProgress, Input, InputAdornment, Tooltip } from '@mui/material'
 import PropTypes from 'prop-types';
 
 export default function FetchingInput({ value, onChange, onKeyDown, errorMessage, loading }) {
+  const filterIcon = (
+    <InputAdornment position="start">
+      <FilterAltOutlinedIcon />
+    </InputAdornment>
+  );
+
+  const maybeErrorIcon = errorMessage && (
+    <Tooltip title={errorMessage}><ErrorIcon color='error' /></Tooltip>
+  );
+
+  const eitherLoadingIconOr = icon => (
+    <InputAdornment position="end">
+      {loading ? <CircularProgress size='1rem' color='info' /> : icon}
+    </InputAdornment>
+  );
+
   return (
     <Input
       fullWidth
       disableUnderline
       autoFocus
       value={value}
-      startAdornment={
-        <InputAdornment position="start">
-          <FilterAltOutlinedIcon />
-        </InputAdornment>
-      }
-      endAdornment={
-        <InputAdornment position="end">
-          {loading ? <CircularProgress size='1rem' color='info' /> : (
-            errorMessage && <Tooltip title={errorMessage}><ErrorIcon color='error' /></Tooltip>
-          )}
-        </InputAdornment>
-      }
+      startAdornment={filterIcon}
+      endAdornment={eitherLoadingIconOr(maybeErrorIcon)}
       onChange={onChange}
       onKeyDown={onKeyDown}
     />

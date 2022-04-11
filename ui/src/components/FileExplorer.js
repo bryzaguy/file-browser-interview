@@ -1,71 +1,49 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import FilterableList from './FilterableList';
+import FetchableList from './FetchableList';
+import FetchableInput from './FetchableInput';
 import FileViewer from './FileViewer';
-
-var currentPromise = null;
 
 export default function FileExplorer({ api }) {
   const [prefix, setPrefix] = React.useState('');
-  const [items, setItems] = React.useState([]);
-  const [errorMessage, setErrorMessage] = React.useState(null);
-  const [loading, setLoading] = React.useState(false);
   const [count, setCount] = React.useState(null);
   const [selected, setSelected] = React.useState(null);
-  const [fileContent, setFileContent] = React.useState(null);
-  const [filename, setFilename] = React.useState(null);
+  const [viewFile, setViewFile] = React.useState(false);
+  const { get: runSearch, ...search } = api.useSearch();
+  const staticContent = api.useStaticContent();
 
-  const onFetch = React.useCallback(function (promise, success) {
-    setErrorMessage('');
-    setLoading(true);
-    currentPromise = promise;
-    promise.then(result => {
-      if (promise === currentPromise) {
-        success(result);
-        setLoading(false);
-      }
-    }, () => {
-      if (promise === currentPromise) {
-        setErrorMessage("There was a problem fetching data.");
-        setLoading(false);
-      }
-    });
-  }, []);
-
-  // Calls the api initially and when prefix or count changes.
-  React.useEffect(() => {
-    setItems([]);
-    onFetch(api.search({ prefix, count }), res => setItems(res.results));
-  }, [prefix, count, api, onFetch]);
+  React.useEffect(
+    () => runSearch({ prefix, count }),
+    [runSearch, prefix, count]
+  );
 
   return (
-    filename ? (
+    viewFile ? (
       <FileViewer
-        name={filename}
-        content={fileContent}
-        onBackButton={() => {
-          setFilename(null);
-          setFileContent(null);
-          setLoading(false);
-          setErrorMessage('');
-        }}
-        errorMessage={errorMessage}
-        loading={loading}
+        name={selected}
+        content={staticContent.data}
+        onBackButton={() => setViewFile(false)}
+        errorMessage={staticContent.error}
+        loading={staticContent.loading}
       />
     ) : (
-      <FilterableList
-        items={items}
-        onFilter={e => setPrefix(e.target.value)}
-        prefix={prefix}
+      <FetchableList
+        items={search.data}
+        renderInput={(props) => (
+          <FetchableInput
+            {...props}
+            errorMessage={search.error}
+            loading={search.loading}
+            value={prefix}
+            onChange={e => setPrefix(e.target.value)}
+          />
+        )}
         selected={selected}
         onSelect={setSelected}
         onSubmit={() => {
-          setFilename(selected);
-          setFileContent(null);
-          onFetch(api.staticContent(selected), setFileContent);
+          setViewFile(true);
+          staticContent.get(selected);
         }}
-        errorMessage={errorMessage}
-        loading={loading}
         count={count}
         onCountChange={setCount}
       />

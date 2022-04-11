@@ -62,11 +62,7 @@ Object {
                         />
                         <div
                           class="MuiInputAdornment-root MuiInputAdornment-positionEnd css-1laqsz7-MuiInputAdornment-root"
-                        >
-                          <p
-                            class="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
-                          />
-                        </div>
+                        />
                       </div>
                     </th>
                     <th
@@ -442,11 +438,7 @@ Object {
                       />
                       <div
                         class="MuiInputAdornment-root MuiInputAdornment-positionEnd css-1laqsz7-MuiInputAdornment-root"
-                      >
-                        <p
-                          class="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
-                        />
-                      </div>
+                      />
                     </div>
                   </th>
                   <th

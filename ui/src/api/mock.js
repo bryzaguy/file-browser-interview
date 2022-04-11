@@ -1,14 +1,13 @@
 import data from './mockData.json';
 
 const api = {
-  search({ prefix } = {}) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(data);
-      });
-    });
+  useSearch() {
+    return {
+      get() {},
+      data: data.results
+    };
   },
-  staticContent() {}
+  useStaticContent() { return {}; }
 };
 
 export default api;
