@@ -2,7 +2,7 @@ import { Box, TableBody, TableCell, TableRow } from '@mui/material';
 import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
 import PropTypes from 'prop-types';
 
-export default function FilterableListBody({items, selected}) {
+export default function FilterableListBody({ items, selected, onSelect, onSubmit }) {
   const removeLastBorder = { '&:last-child td': { border: 0 } };
   const alignContent = { display: 'flex', alignItems: 'flex-end' };
 
@@ -10,7 +10,13 @@ export default function FilterableListBody({items, selected}) {
     <TableBody>
       {items.map(name => {
         return (
-          <TableRow key={name} sx={removeLastBorder} selected={selected === name} >
+          <TableRow
+            key={name}
+            sx={removeLastBorder}
+            selected={selected === name}
+            onClick={() => onSubmit(name)}
+            onMouseEnter={() => onSelect(name)}
+          >
             <TableCell colSpan={3}>
               <Box sx={alignContent}>
                 <InsertDriveFileOutlinedIcon />&nbsp; {name}
@@ -30,5 +36,7 @@ export default function FilterableListBody({items, selected}) {
 
 FilterableListBody.propTypes = {
   selected: PropTypes.string,
+  onSelect: PropTypes.func,
+  onSubmit: PropTypes.func,
   items: PropTypes.arrayOf(PropTypes.string)
 };

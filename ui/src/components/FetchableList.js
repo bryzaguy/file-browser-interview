@@ -40,7 +40,12 @@ export default function FilterableList(props) {
               </TableCell>
             </TableRow>
           </TableHead>
-          <FetchableListBody items={items} selected={selected} />
+          <FetchableListBody
+            items={items}
+            selected={selected}
+            onSelect={onSelect}
+            onSubmit={onSubmit}
+          />
         </Table>
       </TableContainer>
     </Paper>
